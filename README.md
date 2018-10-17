@@ -7,6 +7,7 @@ This library should be considered alpha, and not stable. Breaking changes will h
 
 ## Known issues
 
+- SwiftPM support is broken until we can add dependency on UIKit.
 -  `NavigationBar` back button don't use Swidux store (this is why `NavigationBar` is currently hidden by default).
 
 ## License

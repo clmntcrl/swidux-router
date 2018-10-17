@@ -2,6 +2,8 @@
 
 import PackageDescription
 
+// Note: SwiftPM support is broken until we can add dependency on UIKit.
+
 let package = Package(
     name: "SwiduxRouter",
     products: [
