@@ -1,4 +1,4 @@
-# swidux-router
+# SwiduxRouter
 Router driven by Swidux store.
 
 ## Stability
@@ -7,8 +7,8 @@ This library should be considered alpha, and not stable. Breaking changes will h
 
 ## Known issues
 
-- Currently `NavigationBar` back button don't use Swidux store.  
+-  `NavigationBar` back button don't use Swidux store (this is why `NavigationBar` is currently hidden by default).
 
 ## License
 
-SwiduxWatchmen is released under the MIT license. See [LICENSE](LICENSE]) for details.
+SwiduxRouter is released under the MIT license. See [LICENSE](LICENSE]) for details.
