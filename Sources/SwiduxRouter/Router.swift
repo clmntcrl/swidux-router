@@ -14,6 +14,8 @@ public final class Router: UINavigationController {
         let initialRoute = initialRoute
         store.dispatch(RouteAction.reset(routes: [initialRoute]))
         self.init(rootViewController: initialRoute.build())
+        // Hide NavigationBar because its back buton action isn't currently connected to the Swidux store
+        self.setNavigationBarHidden(true, animated: false)
         // Subscribe for routes state changes
         routeStateSubscription = store.subscribe(keyPath) { [weak self] routes in
             self?.reflect(newRouteStack: routes)
