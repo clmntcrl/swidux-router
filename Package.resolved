@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Swidux",
+        "repositoryURL": "https://github.com/clmntcrl/swidux.git",
+        "state": {
+          "branch": "master",
+          "revision": "dd8070dc64bbe9de3f960c220341f3bb1fb36050",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
