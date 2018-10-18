@@ -1,6 +1,8 @@
 # SwiduxRouter
 Router driven by Swidux store.
 
+<img src="http://clmntcrl.io/images/.github/swidux-router/swidux-router-in-action.gif" width="247" />
+
 ## Stability
 
 This library should be considered alpha, and not stable. Breaking changes will happen often.
