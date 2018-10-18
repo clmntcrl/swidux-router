@@ -14,6 +14,13 @@ public let routeReducer = Reducer<[Route]> { state, action in
         if state.count > 1 {
             state.removeLast()
         }
+    case .backToRoot:
+        if state.count > 1 {
+            state = [ state.first! ]
+        }
+    case .backTo(let route):
+        guard let routeIndex = state.firstIndex(of: route) else { return }
+        state.removeLast(state.count - (routeIndex + 1))
     case .reset(let routes):
         state = routes
     }

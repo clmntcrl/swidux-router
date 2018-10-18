@@ -7,6 +7,19 @@ Router driven by Swidux store.
 
 This library should be considered alpha, and not stable. Breaking changes will happen often.
 
+## Supported actions
+
+```swift
+public enum RouteAction: Action {
+
+    case push(route: Route)
+    case back
+    case backToRoot
+    case backTo(route: Route)
+    case reset(routes: [Route])
+}
+```
+
 ## Known issues
 
 - SwiftPM support is broken until we can add dependency on UIKit.

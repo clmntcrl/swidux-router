@@ -8,5 +8,7 @@ public enum RouteAction: Action {
 
     case push(route: Route)
     case back
+    case backToRoot
+    case backTo(route: Route)
     case reset(routes: [Route])
 }
