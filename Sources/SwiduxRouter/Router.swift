@@ -7,15 +7,16 @@ import Swidux
 
 public final class Router: UINavigationController {
 
-    private var routeStateSubscription: StoreSubscriptionToken!
+    private var routeStateSubscription: StoreSubscriptionToken?
+    private var dispatchRouteAction: ((RouteAction) -> Void)?
 
     public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, [Route]>, initialRoute: Route) {
         // Configure router with its initial route
         let initialRoute = initialRoute
         store.dispatch(RouteAction.reset(routes: [initialRoute]))
         self.init(rootViewController: initialRoute.build())
-        // Hide NavigationBar because its back buton action isn't currently connected to the Swidux store
-        self.setNavigationBarHidden(true, animated: false)
+        // Keep reference on store
+        self.dispatchRouteAction = { store.dispatch($0) }
         // Subscribe for routes state changes
         routeStateSubscription = store.subscribe(keyPath) { [weak self] routes in
             self?.reflect(newRouteStack: routes)
@@ -39,13 +40,11 @@ public final class Router: UINavigationController {
             .map { $0.element }
         // Route to the right place
         switch lowestCommonDenominator.count {
-        case let n
-            where n == newRoutes.count && n == viewControllers.count:
+        case let n where n == newRoutes.count && n == viewControllers.count:
             // Common denominator is equal to the new route stack and also equal to the current route stack. There is nothing to
             // do because new stack and current are equal.
             break
-        case let n
-            where n == newRoutes.count:
+        case let n where n == newRoutes.count:
             // Common denominator is equal to the new route stack. This is the case when new routes are the result of current
             // routes applying some back actions.
             //
@@ -59,7 +58,10 @@ public final class Router: UINavigationController {
             //     currentRouteDescriptors = [ (route1, vcRoute1), (route2, vcRoute2), ... (routeN, vcRouteN) ]
             //     newRoutes = [ route1, route2 ]
             // ```
-            popToViewController(lowestCommonDenominator.last!, animated: true)
+            //
+            // **NB:** We use `super` implementation of `popToViewController` because Router override `popToViewController` to
+            // use Siwdux store and dispatch `RouteAction.backTo(route:)`.
+            super.popToViewController(lowestCommonDenominator.last!, animated: true)
         case let n:
             // General case: common denominator has value or not and we have new route(s) to push.
             //
@@ -69,9 +71,71 @@ public final class Router: UINavigationController {
             //     currentRouteDescriptors = [ (route1, vcRoute1), (route2, vcRoute2) ]
             //     newRoutes = [ route1, routeA, routeB ]
             // ```
+            //
+            // **NB:** We use `super` implementation of `setViewControllers` because Router override `setViewControllers` to
+            // use Siwdux store and dispatch `RouteAction.reset(routes:)`.
             let viewControllers = lowestCommonDenominator
                 + newRoutes[n...].map { $0.build() }
-            setViewControllers(viewControllers, animated: true)
+            super.setViewControllers(viewControllers, animated: true)
         }
+    }
+
+    // MARK: - Pop, push, set stack overrides
+
+    // We override popping, pushing and setting stack items methods to rely on Swidux action dispatch (if the Router has been init
+    // using `init(store:keyPath:initialRoute:)`, otherwise Router use `super` implementation of those methods).
+    //
+    // By doing this we are able to handle keep Swidux store synchronized with our view controller stack when:
+    //     - hiting the back button of the `NavigationBar`
+    //     - using direct call to those methods: `router.popViewController(animated: true)`, ...
+
+    public override func popViewController(animated: Bool) -> UIViewController? {
+        guard let dispatch = dispatchRouteAction else { return super.popViewController(animated: animated) }
+        dispatch(.back)
+        return .none
+    }
+
+    public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+        guard let dispatch = dispatchRouteAction else { return super.popToRootViewController(animated: animated) }
+        dispatch(.backToRoot)
+        return .none
+    }
+
+    public override func popToViewController(
+        _ viewController: UIViewController,
+        animated: Bool
+    ) -> [UIViewController]? {
+        guard let dispatch = dispatchRouteAction else {
+            return super.popToViewController(viewController, animated: animated)
+        }
+        guard let routable = viewController as? RoutableViewController else {
+            fatalError("\(viewController) is not Routable.")
+        }
+        dispatch(.backTo(route: routable.route))
+        return .none
+    }
+
+    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        guard let dispatch = dispatchRouteAction else {
+            return super.pushViewController(viewController, animated: animated)
+        }
+        guard let routable = viewController as? RoutableViewController else {
+            fatalError("\(viewController) is not Routable.")
+        }
+        dispatch(.push(route: routable.route))
+
+    }
+
+    public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
+        guard let dispatch = dispatchRouteAction else {
+            return super.setViewControllers(viewControllers, animated: animated)
+        }
+        let routes: [Route] = viewControllers.map {
+            guard let routable = $0 as? RoutableViewController else {
+                fatalError("\($0) is not Routable.")
+            }
+            return routable.route
+        }
+        dispatch(.reset(routes: routes))
     }
 }

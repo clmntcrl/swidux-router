@@ -12,3 +12,5 @@ let router = Router(
 router.view.frame = store.state.liveViewFrame
 
 PlaygroundPage.current.liveView = router.view
+
+print("✅")
