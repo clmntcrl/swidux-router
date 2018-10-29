@@ -73,7 +73,6 @@ In order to route to new screens use `store.dispatch` with one of the following 
 
 ```swift
 enum RouteAction: Action {
-
     case push(route: Route)
     case back
     case backToRoot
@@ -139,7 +138,10 @@ Then create an iOS app target `AwesomeProjectName` and scheme. Add `AwesomeProje
 
 ## Known issues
 
-- SwiftPM support is a bit tricky because we cannot add dependency on UIKit.
+- Missing support:
+    - `Router.present(_:animated:completion:)`
+    - `UITabBarController`
+- SwiftPM support is a bit tricky because we cannot add dependency on UIKit
 
 ## License
 
