@@ -20,33 +20,56 @@ public final class ColoredViewController: ParametricRoutableViewController {
 
         // Build view
 
-        let container = UIStackView()
-        view.addSubview(container)
-        container.axis = .vertical
-        container.translatesAutoresizingMaskIntoConstraints = false
-        [ NSLayoutConstraint.Attribute.leading, .top, .trailing, .bottom ]
-            .map { NSLayoutConstraint(item: container, attribute: $0, relatedBy: .equal, toItem: view, attribute: $0, multiplier: 1, constant: 0) }
-            .forEach { $0.isActive = true }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Push",
+            style: .plain,
+            target: self,
+            action: #selector(pushColoredViewController)
+        )
+
+        setToolbarItems(
+            [
+                UIBarButtonItem(
+                    title: "Back to root",
+                    style: .plain,
+                    target: self,
+                    action: #selector(backToRoot)
+                ),
+                UIBarButtonItem(
+                    title: "Reset with random route stack",
+                    style: .plain,
+                    target: self,
+                    action: #selector(resetRouterWithRandomRouteStack)
+                ),
+                ],
+            animated: false
+        )
 
         label = UILabel()
         label.textColor = .white
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 14)
-        container.addArrangedSubview(label)
-
-        let buttons = UIStackView(arrangedSubviews:[
-            buildButton(title: "BACK", action: #selector(goBack)),
-            buildButton(title: "PUSH", action: #selector(pushColoredViewController)),
-            buildButton(title: "RESET", action: #selector(resetRouterWithRandomRouteStack)),
-        ])
-        buttons.distribution = .fillEqually
-        container.addArrangedSubview(buttons)
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        [ NSLayoutConstraint.Attribute.leading, .top, .trailing, .bottom ]
+            .map {
+                NSLayoutConstraint(
+                    item: label,
+                    attribute: $0,
+                    relatedBy: .equal,
+                    toItem: view,
+                    attribute: $0,
+                    multiplier: 1,
+                    constant: 0
+                )
+            }
+            .forEach { $0.isActive = true }
 
         // Subscribe store changes
 
         subscription = [
             store.subscribe(\.liveViewFrame) { [weak self] frame in self?.view.frame = frame },
-            store.subscribe(\AppState.routes) { [weak self] routes in
+            store.subscribe(\.routes) { [weak self] routes in
                 self.flatMap {
                     $0.label.text = "\troutes: [\n\t\t"
                         + routes
@@ -58,26 +81,14 @@ public final class ColoredViewController: ParametricRoutableViewController {
         ]
     }
 
-    private func buildButton(title: String, action: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        button.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-        button.addTarget(self, action: action, for: .touchUpInside)
-        return button
-    }
-
     // MARK: - Actions
 
-    @objc private func goBack() {
-        store.dispatch(RouteAction.back)
+    @objc private func backToRoot() {
+        store.dispatch(RouteAction.backToRoot)
     }
 
     @objc private func pushColoredViewController() {
-        store.dispatch(
-            RouteAction.push(route: RootRoute.coloredRoute())
-        )
+        store.dispatch(RouteAction.push(route: RootRoute.coloredRoute()))
     }
 
     @objc private func resetRouterWithRandomRouteStack() {
