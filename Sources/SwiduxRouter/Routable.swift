@@ -15,18 +15,3 @@ public extension Routable where Self: UIViewController {
 
     var route: Route { return Route(type: Self.self) }
 }
-
-// MARK: - ParametricRoutable
-
-public protocol ParametricRoutable: Routable {
-
-    associatedtype RouteParameters: Equatable
-    var params: RouteParameters! { get set }
-}
-
-public typealias ParametricRoutableViewController = UIViewController & ParametricRoutable
-
-public extension ParametricRoutable where Self: UIViewController {
-
-    var route: Route { return Route(type: Self.self, params: self.params) }
-}

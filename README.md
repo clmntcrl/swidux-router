@@ -32,7 +32,7 @@ Make your view controllers `Routable` or `ParametricRoutable` if it depends on p
 class HomeViewController: Routable {/* ... */}
 
 class ProductViewController: ParametricRoutable {
-    var params: Id<Product>!
+    var routeParam: Id<Product>!
     // ...
 }
 ```
@@ -42,7 +42,7 @@ Declare your routes:
 ```swift
 enum AppRoute {
     static let home = Route(type: HomeViewController.self)
-    static let product: (Id<Product>) -> Route = { Route(type: HomeViewController.self, params: $0) }
+    static let product: (Id<Product>) -> Route = { Route(type: HomeViewController.self, routeParam: $0) }
     // ...
 }
 ```

@@ -6,9 +6,9 @@ import SwiduxRouter
 
 public final class ColoredViewController: ParametricRoutableViewController {
 
-    public var params: Int32! {
+    public var routeParam: Int32! {
         didSet {
-            view.backgroundColor = uicolor(hex: params)
+            view.backgroundColor = uicolor(hex: routeParam)
         }
     }
 
@@ -73,7 +73,7 @@ public final class ColoredViewController: ParametricRoutableViewController {
                 self.flatMap {
                     $0.label.text = "\troutes: [\n\t\t"
                         + routes
-                            .map { "\($0.type)(params: 0x\(String($0.params!.value as! Int32, radix: 16)))" }
+                            .map { "\($0.type)(param: 0x\(String($0.routeParam!.value as! Int32, radix: 16)))" }
                             .joined(separator: ",\n\t\t")
                         + ",\n\t]"
                 }

@@ -3,26 +3,26 @@
 
 import Foundation
 
-public struct RouteParams {
+public struct RouteParam {
 
     public let value: Any
-    private let equals: (RouteParams) -> Bool
+    private let equals: (RouteParam) -> Bool
 }
 
-public extension RouteParams {
+public extension RouteParam {
 
     init<P: Equatable>(value: P) {
         self.value = value
-        self.equals = { params in
-            guard let p = params.value as? P else { return false }
+        self.equals = { param in
+            guard let p = param.value as? P else { return false }
             return value == p
         }
     }
 }
 
-extension RouteParams: Equatable {
+extension RouteParam: Equatable {
 
-    public static func == (lhs: RouteParams, rhs: RouteParams) -> Bool {
+    public static func == (lhs: RouteParam, rhs: RouteParam) -> Bool {
         return lhs.equals(rhs)
     }
 }
