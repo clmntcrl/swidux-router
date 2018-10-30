@@ -131,7 +131,7 @@ IPHONEOS_DEPLOYMENT_TARGET = 9.0
 It override default configuration when generating `xcodeproj`:
 
 ```
-swift package generate-xcodeproj --xcconfig-overrides xcode.xcconfig
+$ swift package generate-xcodeproj --xcconfig-overrides xcode.xcconfig
 ```
 
 Then create an iOS app target `AwesomeProjectName` and scheme. Add `AwesomeProjectNameFramework` as embedded binary, that's it.
