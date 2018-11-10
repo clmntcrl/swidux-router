@@ -88,14 +88,14 @@ public final class ColoredViewController: ParametricRoutableViewController {
     }
 
     @objc private func pushColoredViewController() {
-        store.dispatch(RouteAction.push(route: RootRoute.coloredRoute()))
+        store.dispatch(RouteAction.push(route: .coloredRoute))
     }
 
     @objc private func resetRouterWithRandomRouteStack() {
         store.dispatch(
             RouteAction.reset(
                 routes: Array(repeating: (), count: Int.random(in: 1...5))
-                    .map { _ in  RootRoute.coloredRoute() }
+                    .map { _ in  Route.coloredRoute }
             )
         )
     }
