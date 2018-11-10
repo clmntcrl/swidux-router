@@ -1,7 +1,7 @@
 # SwiduxRouter
 Router driven by Swidux store.
 
-<img src="http://clmntcrl.io/images/.github/swidux-router/swidux-router-in-action.gif" width="247" />
+<img src="http://clmntcrl.io/images/.github/swidux-router/swidux-router-in-action.gif#1" width="247" />
 
 ## Stability
 
