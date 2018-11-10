@@ -6,8 +6,7 @@ import SwiduxRouter
 
 let router = Router(
     store: store,
-    keyPath: \.routes,
-    initialRoute: RootRoute.coloredRoute()
+    keyPath: \.routes
 )
 router.isToolbarHidden = false
 router.view.frame = store.state.liveViewFrame

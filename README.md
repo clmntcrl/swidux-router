@@ -9,11 +9,21 @@ This library should be considered alpha, and not stable. Breaking changes will h
 
 ## Usage
 
-Prepare your Swidux store:
+Declare your routes:
+
+```swift
+extension Route {
+static let home = Route(type: HomeViewController.self)
+static let product: (Id<Product>) -> Route = { Route(type: HomeViewController.self, routeParam: $0) }
+// ...
+}
+```
+
+Prepare your Swidux store defining initial route:
 
 ```swift
 struct AppState {
-    var routes = [Route]()
+    var routes = [Route.home]
     // ...
 }
 
@@ -37,16 +47,6 @@ class ProductViewController: ParametricRoutable {
 }
 ```
 
-Declare your routes:
-
-```swift
-enum AppRoute {
-    static let home = Route(type: HomeViewController.self)
-    static let product: (Id<Product>) -> Route = { Route(type: HomeViewController.self, routeParam: $0) }
-    // ...
-}
-```
-
 Init your `Router` and add it to the view controller hierarchy:
 
 ```swift
@@ -60,8 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window.rootViewController = Router(
             store: store,
-            keyPath: \.routes,
-            initialRoute: AppRoute.home
+            keyPath: \.routes
         )
         window.makeKeyAndVisible()
         return true
@@ -88,7 +87,7 @@ enum RouteAction: Action {
 Add the following dependency to your Cartfile:
 
 ```
-github "clmntcrl/swidux-router" ~> 0.1.1
+github "clmntcrl/swidux-router" ~> 0.1.2
 ```
 
 ```
@@ -113,7 +112,7 @@ let package = Package(
     name: "AwesomeProjectNameFramework",
     dependencies: [
         .package(url: "https://github.com/clmntcrl/swidux.git", from: "0.1.1"),
-        .package(url: "https://github.com/clmntcrl/swidux-router.git", from: "0.1.1"),
+        .package(url: "https://github.com/clmntcrl/swidux-router.git", from: "0.1.2"),
     ],
     targets: [
         .target(name: "AwesomeProjectName", dependencies: ["Swidux", "SwiduxRouter"])

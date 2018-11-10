@@ -10,11 +10,14 @@ public final class Router: UINavigationController {
     private var routeStateSubscription: StoreSubscriptionToken?
     private var dispatchRouteAction: ((RouteAction) -> Void)?
 
-    public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, [Route]>, initialRoute: Route) {
+    public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, [Route]>) {
         // Configure router with its initial route
-        let initialRoute = initialRoute
-        store.dispatch(RouteAction.reset(routes: [initialRoute]))
+        guard let initialRoute = store.state[keyPath: keyPath].first else {
+            fatalError("Router cannot be empty of routes")
+        }
         self.init(rootViewController: initialRoute.build())
+        // Then reflect store route stack, because route application state could be initialise with an array having more than one route
+        reflect(newRouteStack: store.state[keyPath: keyPath])
         // Keep reference on store
         self.dispatchRouteAction = { store.dispatch($0) }
         // Subscribe for routes state changes
