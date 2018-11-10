@@ -15,7 +15,7 @@ Declare your routes:
 extension Route {
     static let home = Route(type: HomeViewController.self)
     static let product: (Id<Product>) -> Route = { Route(type: HomeViewController.self, routeParam: $0) }
-// ...
+    // ...
 }
 ```
 
