@@ -4,7 +4,7 @@ import UIKit
 import Swidux
 import SwiduxRouter
 
-public final class ColoredViewController: ParametricRoutableViewController {
+public final class ColoredVC: ParametricRoutableViewController {
 
     public var routeParam: Int32! {
         didSet {
@@ -41,7 +41,7 @@ public final class ColoredViewController: ParametricRoutableViewController {
                     target: self,
                     action: #selector(resetRouterWithRandomRouteStack)
                 ),
-                ],
+            ],
             animated: false
         )
 
@@ -49,6 +49,8 @@ public final class ColoredViewController: ParametricRoutableViewController {
         label.textColor = .white
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 14)
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(presentRoute)))
+        label.isUserInteractionEnabled = true
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         [ NSLayoutConstraint.Attribute.leading, .top, .trailing, .bottom ]
@@ -69,19 +71,17 @@ public final class ColoredViewController: ParametricRoutableViewController {
 
         subscription = [
             store.subscribe(\.liveViewFrame) { [weak self] frame in self?.view.frame = frame },
-            store.subscribe(\.routes) { [weak self] routes in
-                self.flatMap {
-                    $0.label.text = "\troutes: [\n\t\t"
-                        + routes
-                            .map { "\($0.type)(param: 0x\(String($0.routeParam!.value as! Int32, radix: 16)))" }
-                            .joined(separator: ",\n\t\t")
-                        + ",\n\t]"
-                }
+            store.subscribe(\.root) { [weak self] root in
+                self?.label.text = describingRoot(root)
             }
         ]
     }
 
     // MARK: - Actions
+
+    @objc private func presentRoute() {
+        store.dispatch(RouteAction.present(route: .blackRoute))
+    }
 
     @objc private func backToRoot() {
         store.dispatch(RouteAction.backToRoot)

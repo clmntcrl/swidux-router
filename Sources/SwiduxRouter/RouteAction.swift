@@ -6,6 +6,7 @@ import Swidux
 
 public enum RouteAction: Action {
 
+    case present(route: Route)
     case push(route: Route)
     case back
     case backToRoot

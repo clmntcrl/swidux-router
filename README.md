@@ -23,14 +23,14 @@ Prepare your Swidux store defining initial route:
 
 ```swift
 struct AppState {
-    var routes = [Route.home]
+    var root = RootDescriptor(initialRoute: .home)
     // ...
 }
 
 let store = Store(
     initialState: AppState(),
     reducer: .combine(reducers: [
-        routeReducer.lift(\.routes),
+        routeReducer.lift(\.root),
         // ...
     ])
 )
@@ -72,6 +72,7 @@ In order to route to new screens use `store.dispatch` with one of the following 
 
 ```swift
 enum RouteAction: Action {
+    case present(route: Route)
     case push(route: Route)
     case back
     case backToRoot
@@ -87,7 +88,7 @@ enum RouteAction: Action {
 Add the following dependency to your Cartfile:
 
 ```
-github "clmntcrl/swidux-router" ~> 0.1.2
+github "clmntcrl/swidux-router" ~> 0.1.3
 ```
 
 ```
@@ -137,9 +138,7 @@ Then create an iOS app target `AwesomeProjectName` and scheme. Add `AwesomeProje
 
 ## Known issues
 
-- Missing support:
-    - `Router.present(_:animated:completion:)`
-    - `UITabBarController`
+- Missing support for `UITabBarController`
 - SwiftPM support is a bit tricky because we cannot add dependency on UIKit
 
 ## License

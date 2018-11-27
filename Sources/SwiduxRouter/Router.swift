@@ -10,25 +10,26 @@ public final class Router: UINavigationController {
     private var routeStateSubscription: StoreSubscriptionToken?
     private var dispatchRouteAction: ((RouteAction) -> Void)?
 
-    public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, [Route]>) {
+    public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, RootDescriptor>) {
         // Configure router with its initial route
-        guard let initialRoute = store.state[keyPath: keyPath].first else {
+        guard let initialRoute = store.state[keyPath: keyPath].routes.first else {
             fatalError("Router cannot be empty of routes")
         }
         self.init(rootViewController: initialRoute.build())
-        // Then reflect store route stack, because route application state could be initialise with an array having more than one route
-        reflect(newRouteStack: store.state[keyPath: keyPath])
+        // Then sync store route stack, because route application state could be initialise with an array having more than one route
+        sync(store.state[keyPath: keyPath])
         // Keep reference on store
         self.dispatchRouteAction = { store.dispatch($0) }
         // Subscribe for routes state changes
-        routeStateSubscription = store.subscribe(keyPath) { [weak self] routes in
-            self?.reflect(newRouteStack: routes)
+        routeStateSubscription = store.subscribe(keyPath) { [weak self] description in
+            self?.sync(description)
+            return
         }
     }
 
-    private func reflect(newRouteStack newRoutes: [Route]) {
+    private func sync(_ descriptor: RootDescriptor) {
         // Ensure that new route stack cannot be empty
-        guard newRoutes.count > 0 else {
+        guard descriptor.routes.count > 0 else {
             fatalError("Router cannot be empty of routes")
         }
         // Find the lowest common denominator of `currentRoutes` and `newRoutes`.
@@ -38,16 +39,16 @@ public final class Router: UINavigationController {
                 guard let routable = $0.element as? RoutableViewController else {
                     fatalError("\($0.element) is not Routable.")
                 }
-                return $0.offset < newRoutes.count && routable.route == newRoutes[$0.offset]
+                return $0.offset < descriptor.routes.count && routable.route == descriptor.routes[$0.offset]
             }
             .map { $0.element }
         // Route to the right place
         switch lowestCommonDenominator.count {
-        case let n where n == newRoutes.count && n == viewControllers.count:
+        case let n where n == descriptor.routes.count && n == viewControllers.count:
             // Common denominator is equal to the new route stack and also equal to the current route stack. There is nothing to
             // do because new stack and current are equal.
             break
-        case let n where n == newRoutes.count:
+        case let n where n == descriptor.routes.count:
             // Common denominator is equal to the new route stack. This is the case when new routes are the result of current
             // routes applying some back actions.
             //
@@ -78,8 +79,35 @@ public final class Router: UINavigationController {
             // **NB:** We use `super` implementation of `setViewControllers` because Router override `setViewControllers` to
             // use Siwdux store and dispatch `RouteAction.reset(routes:)`.
             let viewControllers = lowestCommonDenominator
-                + newRoutes[n...].map { $0.build() }
+                + descriptor.routes[n...].map { $0.build() }
             super.setViewControllers(viewControllers, animated: true)
+        }
+        // Sync presented route
+        syncPresentedRoute(descriptor.presenting)
+    }
+
+    private func syncPresentedRoute(_ routeToPresent: Route?) {
+        // Present or dismiss presented route if needed
+        if case .some(let route) = routeToPresent {
+            // Check if last view controller (aka. the view controller on top of the navigtion stack) has presented view
+            // controller currently
+            if let currentlyPresentedViewController = presentedViewController {
+                // Verify that currently presented view controller is the view controller we need to present. In that case routes
+                // and view controllers are in sync so just return
+                if
+                    let routable = currentlyPresentedViewController as? RoutableViewController,
+                    routable.route == route
+                {
+                    return
+                }
+                // Dissmiss currently presented view controller then prensent new one
+                currentlyPresentedViewController.dismiss(animated: true) { self.present(route.build(), animated: true) }
+            } else {
+                super.present(route.build(), animated: true)
+            }
+        } else {
+            // Dissmiss presented view controller if exists
+            presentedViewController?.dismiss(animated: true)
         }
     }
 
@@ -140,5 +168,20 @@ public final class Router: UINavigationController {
             return routable.route
         }
         dispatch(.reset(routes: routes))
+    }
+
+    public override func present(
+        _ viewControllerToPresent: UIViewController,
+        animated flag: Bool,
+        completion: (() -> Void)? = nil
+    ) {
+
+        guard let dispatch = dispatchRouteAction else {
+            return super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
+        guard let routable = viewControllerToPresent as? RoutableViewController else {
+            fatalError("\(viewControllerToPresent) is not Routable.")
+        }
+        dispatch(.present(route: routable.route))
     }
 }
