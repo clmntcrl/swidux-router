@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window.rootViewController = Router(
             store: store,
-            keyPath: \.routes
+            keyPath: \.root
         )
         window.makeKeyAndVisible()
         return true
