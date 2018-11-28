@@ -143,7 +143,7 @@ public final class Router: UINavigationController {
         guard let routable = viewController as? RoutableViewController else {
             fatalError("\(viewController) is not Routable.")
         }
-        dispatch(.backTo(route: routable.route))
+        dispatch(.backTo(routable.route))
         return .none
     }
 
@@ -154,7 +154,7 @@ public final class Router: UINavigationController {
         guard let routable = viewController as? RoutableViewController else {
             fatalError("\(viewController) is not Routable.")
         }
-        dispatch(.push(route: routable.route))
+        dispatch(.push(routable.route))
 
     }
 
@@ -168,7 +168,7 @@ public final class Router: UINavigationController {
             }
             return routable.route
         }
-        dispatch(.reset(routes: routes))
+        dispatch(.reset(.init(routes: routes)))
     }
 
     public override func present(
@@ -183,6 +183,6 @@ public final class Router: UINavigationController {
         guard let routable = viewControllerToPresent as? RoutableViewController else {
             fatalError("\(viewControllerToPresent) is not Routable.")
         }
-        dispatch(.present(route: routable.route))
+        dispatch(.present(routable.route))
     }
 }

@@ -72,12 +72,12 @@ In order to route to new screens use `store.dispatch` with one of the following 
 
 ```swift
 enum RouteAction: Action {
-    case present(route: Route)
-    case push(route: Route)
+    case present(Route)
+    case push(Route)
     case back
     case backToRoot
-    case backTo(route: Route)
-    case reset(routes: [Route])
+    case backTo(Route)
+    case reset(RootDescriptor)
 }
 ```
 

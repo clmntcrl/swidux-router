@@ -28,8 +28,7 @@ public let routeReducer = Reducer<RootDescriptor> { state, action in
         guard let routeIndex = state.routes.firstIndex(of: route) else { return }
         state.routes.removeLast(state.routes.count - (routeIndex + 1))
         state.presented = .none
-    case .reset(let routes):
-        state.routes = routes
-        state.presented = .none
+    case .reset(let rootDescriptor):
+        state = rootDescriptor
     }
 }
