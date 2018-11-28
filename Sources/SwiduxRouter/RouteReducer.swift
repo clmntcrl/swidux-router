@@ -9,13 +9,13 @@ public let routeReducer = Reducer<RootDescriptor> { state, action in
 
     switch action {
     case .present(let route):
-        state.presenting = route
+        state.presented = route
     case .push(let route):
         state.routes += [route]
-        state.presenting = .none
+        state.presented = .none
     case .back:
-        if state.presenting != .none {
-            state.presenting = .none
+        if state.presented != .none {
+            state.presented = .none
         } else if state.routes.count > 1 {
             state.routes.removeLast()
         }
@@ -23,13 +23,13 @@ public let routeReducer = Reducer<RootDescriptor> { state, action in
         if state.routes.count > 1 {
             state.routes = [ state.routes.first! ]
         }
-        state.presenting = .none
+        state.presented = .none
     case .backTo(let route):
         guard let routeIndex = state.routes.firstIndex(of: route) else { return }
         state.routes.removeLast(state.routes.count - (routeIndex + 1))
-        state.presenting = .none
+        state.presented = .none
     case .reset(let routes):
         state.routes = routes
-        state.presenting = .none
+        state.presented = .none
     }
 }

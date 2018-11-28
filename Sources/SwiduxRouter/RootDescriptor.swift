@@ -6,11 +6,11 @@ import Foundation
 public struct RootDescriptor {
 
     public var routes: [Route]
-    public var presenting: Route? = .none
+    public var presented: Route? = .none
 
-    public init(routes: [Route], presenting: Route? = .none) {
+    public init(routes: [Route], presented: Route? = .none) {
         self.routes = routes
-        self.presenting = presenting
+        self.presented = presented
     }
 }
 

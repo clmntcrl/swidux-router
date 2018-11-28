@@ -83,27 +83,28 @@ public final class Router: UINavigationController {
             super.setViewControllers(viewControllers, animated: true)
         }
         // Sync presented route
-        syncPresentedRoute(descriptor.presenting)
+        syncPresentedRoute(descriptor.presented)
     }
 
-    private func syncPresentedRoute(_ routeToPresent: Route?) {
+    private func syncPresentedRoute(_ presentedRoute: Route?) {
         // Present or dismiss presented route if needed
-        if case .some(let route) = routeToPresent {
-            // Check if last view controller (aka. the view controller on top of the navigtion stack) has presented view
-            // controller currently
+        if let presented = presentedRoute {
+            // Check if router already has presented view controller
             if let currentlyPresentedViewController = presentedViewController {
                 // Verify that currently presented view controller is the view controller we need to present. In that case routes
                 // and view controllers are in sync so just return
                 if
                     let routable = currentlyPresentedViewController as? RoutableViewController,
-                    routable.route == route
+                    routable.route == presented
                 {
                     return
                 }
-                // Dissmiss currently presented view controller then prensent new one
-                currentlyPresentedViewController.dismiss(animated: true) { self.present(route.build(), animated: true) }
+                // Dissmiss currently presented view controller then present new one
+                currentlyPresentedViewController.dismiss(animated: true) {
+                    self.present(presented.build(), animated: true)
+                }
             } else {
-                super.present(route.build(), animated: true)
+                super.present(presented.build(), animated: true)
             }
         } else {
             // Dissmiss presented view controller if exists

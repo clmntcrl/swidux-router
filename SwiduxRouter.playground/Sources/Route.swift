@@ -28,11 +28,11 @@ public func describingRoute(_ route: Route) -> String {
 // MARK: - Describing RouteDescription
 
 public func describingRoot(_ descriptor: RootDescriptor) -> String {
-    let presentedRoute = descriptor.presenting
+    let presentedRoute = descriptor.presented
         .flatMap(describingRoute) ?? "none"
     return "\troutes: [\n\t\t"
         + descriptor.routes
             .map(describingRoute)
             .joined(separator: ",\n\t\t")
-        + ",\n\t]\n\tpresenting: \(presentedRoute)"
+        + ",\n\t]\n\tpresented: \(presentedRoute)"
 }
