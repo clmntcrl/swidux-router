@@ -65,7 +65,8 @@ public final class Router: UINavigationController {
             //
             // **NB:** We use `super` implementation of `popToViewController` because Router override `popToViewController` to
             // use Siwdux store and dispatch `RouteAction.backTo(route:)`.
-            super.popToViewController(lowestCommonDenominator.last!, animated: true)
+            let lastCommonViewController = lowestCommonDenominator.last!
+            dismissPresentedRouteIfExists(then: { super.popToViewController(lastCommonViewController, animated: true) })
         case let n:
             // General case: common denominator has value or not and we have new route(s) to push.
             //
@@ -78,12 +79,18 @@ public final class Router: UINavigationController {
             //
             // **NB:** We use `super` implementation of `setViewControllers` because Router override `setViewControllers` to
             // use Siwdux store and dispatch `RouteAction.reset(routes:)`.
+
             let viewControllers = lowestCommonDenominator
                 + descriptor.routes[n...].map { $0.build() }
-            super.setViewControllers(viewControllers, animated: true)
+            dismissPresentedRouteIfExists(then: { super.setViewControllers(viewControllers, animated: true) })
         }
         // Sync presented route
         syncPresentedRoute(descriptor.presented)
+    }
+
+    private func dismissPresentedRouteIfExists(then: @escaping () -> Void = {}) {
+        guard let presented = presentedViewController else { return then() }
+        presented.dismiss(animated: true, completion: then)
     }
 
     private func syncPresentedRoute(_ presentedRoute: Route?) {
@@ -92,7 +99,8 @@ public final class Router: UINavigationController {
             // Check if router already has presented view controller
             if let currentlyPresentedViewController = presentedViewController {
                 // Verify that currently presented view controller is the view controller we need to present. In that case routes
-                // and view controllers are in sync so just return
+                // and view controllers are in sync so just return. Otherwise dismiss curently presented view controller then
+                // present the new one.
                 if
                     let routable = currentlyPresentedViewController as? RoutableViewController,
                     routable.route == presented
@@ -100,15 +108,13 @@ public final class Router: UINavigationController {
                     return
                 }
                 // Dissmiss currently presented view controller then present new one
-                currentlyPresentedViewController.dismiss(animated: true) {
-                    self.present(presented.build(), animated: true)
-                }
+                dismissPresentedRouteIfExists(then: { self.present(presented.build(), animated: true) })
             } else {
                 super.present(presented.build(), animated: true)
             }
         } else {
             // Dissmiss presented view controller if exists
-            presentedViewController?.dismiss(animated: true)
+            dismissPresentedRouteIfExists()
         }
     }
 
@@ -137,6 +143,7 @@ public final class Router: UINavigationController {
         _ viewController: UIViewController,
         animated: Bool
     ) -> [UIViewController]? {
+
         guard let dispatch = dispatchRouteAction else {
             return super.popToViewController(viewController, animated: animated)
         }
