@@ -47,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiduxRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCF6A87421F7966D008484B7 /* SwiduxRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiduxRouter.h; sourceTree = "<group>"; };
 		FCF6A87521F7966D008484B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF6A87A21F7966D008484B7 /* SwiduxRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiduxRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6A87F21F7966D008484B7 /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiduxRouterTests.swift; path = ../Tests/SwiduxRouterTests.swift; sourceTree = "<group>"; };
@@ -84,14 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC3FE53B21F799CE009CA663 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				FCF6A87421F7966D008484B7 /* SwiduxRouter.h */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		FCF6A86721F7966D008484B7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +90,6 @@
 				FCF6A87321F7966D008484B7 /* Sources */,
 				FCF6A87E21F7966D008484B7 /* Tests */,
 				FCF6A87221F7966D008484B7 /* Products */,
-				FC3FE53B21F799CE009CA663 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
