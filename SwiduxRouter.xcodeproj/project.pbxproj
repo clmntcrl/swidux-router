@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"SwiduxRouter::SwiduxRouterPackageTests::ProductTarget" /* SwiduxRouterPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_79 /* Build configuration list for PBXAggregateTarget "SwiduxRouterPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_82 /* PBXTargetDependency */,
+			);
+			name = SwiduxRouterPackageTests;
+			productName = SwiduxRouterPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		FC043BC321ADC293002A354D /* RootDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC043BC221ADC293002A354D /* RootDescriptor.swift */; };
+		OBJ_43 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Action.swift */; };
+		OBJ_44 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Middleware.swift */; };
+		OBJ_45 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Reducer.swift */; };
+		OBJ_46 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Store.swift */; };
+		OBJ_47 /* StateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StateUpdate.swift */; };
+		OBJ_48 /* StoreSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StoreSubscription.swift */; };
+		OBJ_49 /* StoreSubscriptionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StoreSubscriptionToken.swift */; };
+		OBJ_56 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Package.swift */; };
+		OBJ_62 /* ParametricRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ParametricRoutable.swift */; };
+		OBJ_63 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Routable.swift */; };
+		OBJ_64 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Route.swift */; };
+		OBJ_65 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* RouteAction.swift */; };
+		OBJ_66 /* RouteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* RouteParams.swift */; };
+		OBJ_67 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* RouteReducer.swift */; };
+		OBJ_68 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Router.swift */; };
+		OBJ_70 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swidux::Swidux::Product" /* Swidux.framework */; };
+		OBJ_77 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_88 /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* SwiduxRouterTests.swift */; };
+		OBJ_90 /* SwiduxRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiduxRouter::SwiduxRouter::Product" /* SwiduxRouter.framework */; };
+		OBJ_91 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swidux::Swidux::Product" /* Swidux.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC043BBC21AD9027002A354D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Swidux::Swidux";
+			remoteInfo = Swidux;
+		};
+		FC043BBD21AD9027002A354D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiduxRouter::SwiduxRouter";
+			remoteInfo = SwiduxRouter;
+		};
+		FC043BBE21AD9027002A354D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Swidux::Swidux";
+			remoteInfo = Swidux;
+		};
+		FC043BBF21AD9029002A354D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiduxRouter::SwiduxRouterTests";
+			remoteInfo = SwiduxRouterTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC043BC221ADC293002A354D /* RootDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDescriptor.swift; sourceTree = "<group>"; };
+		OBJ_11 /* ParametricRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricRoutable.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		OBJ_14 /* RouteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAction.swift; sourceTree = "<group>"; };
+		OBJ_15 /* RouteParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteParams.swift; sourceTree = "<group>"; };
+		OBJ_16 /* RouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteReducer.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		OBJ_20 /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiduxRouterTests.swift; sourceTree = "<group>"; };
+		OBJ_21 /* SwiduxRouter.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = SwiduxRouter.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_25 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		OBJ_30 /* StateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUpdate.swift; sourceTree = "<group>"; };
+		OBJ_31 /* StoreSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscription.swift; sourceTree = "<group>"; };
+		OBJ_32 /* StoreSubscriptionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscriptionToken.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/clmntcrl/Documents/swidux-router/.build/checkouts/swidux.git--8495815599010053412/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_8 /* xcode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = xcode.xcconfig; sourceTree = "<group>"; };
+		"Swidux::Swidux::Product" /* Swidux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swidux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiduxRouter::SwiduxRouter::Product" /* SwiduxRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiduxRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiduxRouter::SwiduxRouterTests::Product" /* SwiduxRouterTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiduxRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_70 /* Swidux.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* SwiduxRouter.framework in Frameworks */,
+				OBJ_91 /* Swidux.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* SwiduxRouter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* ParametricRoutable.swift */,
+				OBJ_12 /* Routable.swift */,
+				OBJ_13 /* Route.swift */,
+				OBJ_14 /* RouteAction.swift */,
+				OBJ_15 /* RouteParams.swift */,
+				OBJ_16 /* RouteReducer.swift */,
+				OBJ_17 /* Router.swift */,
+				FC043BC221ADC293002A354D /* RootDescriptor.swift */,
+			);
+			name = SwiduxRouter;
+			path = Sources/SwiduxRouter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* SwiduxRouterTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_19 /* SwiduxRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* SwiduxRouterTests.swift */,
+			);
+			name = SwiduxRouterTests;
+			path = Tests/SwiduxRouterTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* Swidux 0.1.1 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Swidux 0.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* Swidux */,
+				OBJ_33 /* Package.swift */,
+			);
+			name = "Swidux 0.1.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* Swidux */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* Action.swift */,
+				OBJ_26 /* Middleware.swift */,
+				OBJ_27 /* Reducer.swift */,
+				OBJ_28 /* Store.swift */,
+				OBJ_29 /* StoreSubscription */,
+			);
+			name = Swidux;
+			path = ".build/checkouts/swidux.git--8495815599010053412/Sources/Swidux";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_29 /* StoreSubscription */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* StateUpdate.swift */,
+				OBJ_31 /* StoreSubscription.swift */,
+				OBJ_32 /* StoreSubscriptionToken.swift */,
+			);
+			path = StoreSubscription;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"SwiduxRouter::SwiduxRouterTests::Product" /* SwiduxRouterTests.xctest */,
+				"Swidux::Swidux::Product" /* Swidux.framework */,
+				"SwiduxRouter::SwiduxRouter::Product" /* SwiduxRouter.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Configs */,
+				OBJ_9 /* Sources */,
+				OBJ_18 /* Tests */,
+				OBJ_21 /* SwiduxRouter.xcworkspace */,
+				OBJ_22 /* Dependencies */,
+				OBJ_34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* xcode.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* SwiduxRouter */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Swidux::Swidux" /* Swidux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "Swidux" */;
+			buildPhases = (
+				OBJ_42 /* Sources */,
+				OBJ_50 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swidux;
+			productName = Swidux;
+			productReference = "Swidux::Swidux::Product" /* Swidux.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Swidux::SwiftPMPackageDescription" /* SwiduxPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "SwiduxPackageDescription" */;
+			buildPhases = (
+				OBJ_55 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiduxPackageDescription;
+			productName = SwiduxPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiduxRouter::SwiduxRouter" /* SwiduxRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_58 /* Build configuration list for PBXNativeTarget "SwiduxRouter" */;
+			buildPhases = (
+				OBJ_61 /* Sources */,
+				OBJ_69 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_71 /* PBXTargetDependency */,
+			);
+			name = SwiduxRouter;
+			productName = SwiduxRouter;
+			productReference = "SwiduxRouter::SwiduxRouter::Product" /* SwiduxRouter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiduxRouter::SwiduxRouterTests" /* SwiduxRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_84 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests" */;
+			buildPhases = (
+				OBJ_87 /* Sources */,
+				OBJ_89 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_92 /* PBXTargetDependency */,
+				OBJ_93 /* PBXTargetDependency */,
+			);
+			name = SwiduxRouterTests;
+			productName = SwiduxRouterTests;
+			productReference = "SwiduxRouter::SwiduxRouterTests::Product" /* SwiduxRouterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"SwiduxRouter::SwiftPMPackageDescription" /* SwiduxRouterPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_73 /* Build configuration list for PBXNativeTarget "SwiduxRouterPackageDescription" */;
+			buildPhases = (
+				OBJ_76 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiduxRouterPackageDescription;
+			productName = SwiduxRouterPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SwiduxRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Swidux::Swidux" /* Swidux */,
+				"Swidux::SwiftPMPackageDescription" /* SwiduxPackageDescription */,
+				"SwiduxRouter::SwiduxRouter" /* SwiduxRouter */,
+				"SwiduxRouter::SwiftPMPackageDescription" /* SwiduxRouterPackageDescription */,
+				"SwiduxRouter::SwiduxRouterPackageTests::ProductTarget" /* SwiduxRouterPackageTests */,
+				"SwiduxRouter::SwiduxRouterTests" /* SwiduxRouterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_43 /* Action.swift in Sources */,
+				OBJ_44 /* Middleware.swift in Sources */,
+				OBJ_45 /* Reducer.swift in Sources */,
+				OBJ_46 /* Store.swift in Sources */,
+				OBJ_47 /* StateUpdate.swift in Sources */,
+				OBJ_48 /* StoreSubscription.swift in Sources */,
+				OBJ_49 /* StoreSubscriptionToken.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_56 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_62 /* ParametricRoutable.swift in Sources */,
+				OBJ_63 /* Routable.swift in Sources */,
+				OBJ_64 /* Route.swift in Sources */,
+				FC043BC321ADC293002A354D /* RootDescriptor.swift in Sources */,
+				OBJ_65 /* RouteAction.swift in Sources */,
+				OBJ_66 /* RouteParams.swift in Sources */,
+				OBJ_67 /* RouteReducer.swift in Sources */,
+				OBJ_68 /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_77 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_88 /* SwiduxRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Swidux::Swidux" /* Swidux */;
+			targetProxy = FC043BBC21AD9027002A354D /* PBXContainerItemProxy */;
+		};
+		OBJ_82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiduxRouter::SwiduxRouterTests" /* SwiduxRouterTests */;
+			targetProxy = FC043BBF21AD9029002A354D /* PBXContainerItemProxy */;
+		};
+		OBJ_92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiduxRouter::SwiduxRouter" /* SwiduxRouter */;
+			targetProxy = FC043BBD21AD9027002A354D /* PBXContainerItemProxy */;
+		};
+		OBJ_93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Swidux::Swidux" /* Swidux */;
+			targetProxy = FC043BBE21AD9027002A354D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/Swidux_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Swidux;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Swidux;
+			};
+			name = Debug;
+		};
+		OBJ_41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/Swidux_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Swidux;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Swidux;
+			};
+			name = Release;
+		};
+		OBJ_53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/SwiduxRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiduxRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiduxRouter;
+			};
+			name = Debug;
+		};
+		OBJ_60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/SwiduxRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiduxRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiduxRouter;
+			};
+			name = Release;
+		};
+		OBJ_74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/SwiduxRouterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiduxRouterTests;
+			};
+			name = Debug;
+		};
+		OBJ_86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* xcode.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiduxRouter.xcodeproj/SwiduxRouterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiduxRouterTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "SwiduxRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_39 /* Build configuration list for PBXNativeTarget "Swidux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_40 /* Debug */,
+				OBJ_41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_52 /* Build configuration list for PBXNativeTarget "SwiduxPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_53 /* Debug */,
+				OBJ_54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_58 /* Build configuration list for PBXNativeTarget "SwiduxRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_59 /* Debug */,
+				OBJ_60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_73 /* Build configuration list for PBXNativeTarget "SwiduxRouterPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_74 /* Debug */,
+				OBJ_75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_79 /* Build configuration list for PBXAggregateTarget "SwiduxRouterPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_80 /* Debug */,
+				OBJ_81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_84 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_85 /* Debug */,
+				OBJ_86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
