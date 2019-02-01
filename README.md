@@ -3,10 +3,6 @@ Router driven by Swidux store.
 
 <img src="http://clmntcrl.io/images/.github/swidux-router/swidux-router-in-action.gif#1" width="247" />
 
-## Stability
-
-This library should be considered alpha, and not stable. Breaking changes will happen often.
-
 ## Usage
 
 Declare your routes:
@@ -84,6 +80,47 @@ enum RouteAction: Action {
 ## Known issues
 
 - Missing support for `UITabBarController`
+
+## Installation
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+Add the following dependency to your `Cartfile`:
+
+```ruby
+github "clmntcrl/swidux-router" ~> 0.2
+```
+
+### [CocoaPods](https://cocoapods.org)
+
+Add the following pod to your `Podfile`:
+
+```ruby
+pod 'SwiduxRouter', '~> 0.2'
+```
+
+### [SwiftPM](https://github.com/apple/swift-package-manager)
+
+Add the package as dependency in your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/clmntcrl/swidux-router.git", from: "0.2.0"),
+]
+```
+
+Create a `xcode.xcconfig` file, with the following content:
+
+```
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+IPHONEOS_DEPLOYMENT_TARGET = 10.0
+```
+
+Generate `.xcodeproj`:
+
+```
+swift package generate-xcodeproj --xcconfig-overrides xcode.xcconfig
+```
 
 ## License
 
