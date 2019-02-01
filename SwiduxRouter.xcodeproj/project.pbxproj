@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC3FE54121F79A2C009CA663 /* SwiduxRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF6A89D21F79795008484B7 /* SwiduxRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC86FEAD22043D8E004BE939 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC86FEA822043D6C004BE939 /* Swidux.framework */; };
 		FCF6A87B21F7966D008484B7 /* SwiduxRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */; };
 		FCF6A88021F7966D008484B7 /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A87F21F7966D008484B7 /* SwiduxRouterTests.swift */; };
 		FCF6A89421F7970B008484B7 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88B21F79709008484B7 /* RouteAction.swift */; };
@@ -18,30 +19,57 @@
 		FCF6A89921F7970B008484B7 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89021F7970A008484B7 /* RouteReducer.swift */; };
 		FCF6A89A21F7970B008484B7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89121F7970A008484B7 /* Routable.swift */; };
 		FCF6A89C21F7970B008484B7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89321F7970B008484B7 /* Route.swift */; };
-		FCF6A8AC21F79894008484B7 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF6A8A921F79888008484B7 /* Swidux.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FC86FEA122043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B84A881550CC9E33034E6C3B28D2E405;
+			remoteInfo = SwiduxTests_iOS;
+		};
+		FC86FEA322043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C020E0ACF2A50D88680B8D5FC2677CA9;
+			remoteInfo = SwiduxTests_macOS;
+		};
+		FC86FEA522043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B43303D9BE1DE4F0CAB6510A965A14B;
+			remoteInfo = SwiduxTests_tvOS;
+		};
+		FC86FEA722043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E00E58B90F61327BE10853247E09B69B;
+			remoteInfo = Swidux_iOS;
+		};
+		FC86FEA922043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEB320226CDAC1A50D285E463B28A73F;
+			remoteInfo = Swidux_macOS;
+		};
+		FC86FEAB22043D6C004BE939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED7F98FFB69D653A28196DA164FE66F6;
+			remoteInfo = Swidux_tvOS;
+		};
 		FCF6A87C21F7966D008484B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FCF6A86821F7966D008484B7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FCF6A87021F7966D008484B7;
 			remoteInfo = SwiduxRouter;
-		};
-		FCF6A8A821F79888008484B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Swidux::Swidux::Product";
-			remoteInfo = Swidux;
-		};
-		FCF6A8AA21F79888008484B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Swidux::SwiduxTests::Product";
-			remoteInfo = SwiduxTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -68,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF6A8AC21F79894008484B7 /* Swidux.framework in Frameworks */,
+				FC86FEAD22043D8E004BE939 /* Swidux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +167,12 @@
 		FCF6A8A221F79888008484B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCF6A8A921F79888008484B7 /* Swidux.framework */,
-				FCF6A8AB21F79888008484B7 /* SwiduxTests.xctest */,
+				FC86FEA222043D6C004BE939 /* SwiduxTests.xctest */,
+				FC86FEA422043D6C004BE939 /* SwiduxTests.xctest */,
+				FC86FEA622043D6C004BE939 /* SwiduxTests.xctest */,
+				FC86FEA822043D6C004BE939 /* Swidux.framework */,
+				FC86FEAA22043D6C004BE939 /* Swidux.framework */,
+				FC86FEAC22043D6C004BE939 /* Swidux.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,18 +271,46 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FCF6A8A921F79888008484B7 /* Swidux.framework */ = {
+		FC86FEA222043D6C004BE939 /* SwiduxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiduxTests.xctest;
+			remoteRef = FC86FEA122043D6C004BE939 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC86FEA422043D6C004BE939 /* SwiduxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiduxTests.xctest;
+			remoteRef = FC86FEA322043D6C004BE939 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC86FEA622043D6C004BE939 /* SwiduxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiduxTests.xctest;
+			remoteRef = FC86FEA522043D6C004BE939 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC86FEA822043D6C004BE939 /* Swidux.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Swidux.framework;
-			remoteRef = FCF6A8A821F79888008484B7 /* PBXContainerItemProxy */;
+			remoteRef = FC86FEA722043D6C004BE939 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FCF6A8AB21F79888008484B7 /* SwiduxTests.xctest */ = {
+		FC86FEAA22043D6C004BE939 /* Swidux.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = file;
-			path = SwiduxTests.xctest;
-			remoteRef = FCF6A8AA21F79888008484B7 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Swidux.framework;
+			remoteRef = FC86FEA922043D6C004BE939 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC86FEAC22043D6C004BE939 /* Swidux.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Swidux.framework;
+			remoteRef = FC86FEAB22043D6C004BE939 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

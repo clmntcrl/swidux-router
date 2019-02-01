@@ -9,7 +9,7 @@ let router = Router(
     keyPath: \.root
 )
 router.isToolbarHidden = false
-router.view.frame = store.state.liveViewFrame
+router.view.frame = store.getState().liveViewFrame
 
 PlaygroundPage.current.liveView = router.view
 
