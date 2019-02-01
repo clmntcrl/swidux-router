@@ -15,6 +15,8 @@ targets:
             testTargets: [SwiduxRouterTests_$platform]
         sources: [Sources]
         type: framework
+        dependencies:
+            - carthage: Swidux
     SwiduxRouterTests:
         dependencies: [{target: SwiduxRouter_$platform}]
         platform: [iOS]
