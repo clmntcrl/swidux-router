@@ -12,12 +12,13 @@ public final class Router: UINavigationController {
 
     public convenience init<AppState>(store: Store<AppState>, keyPath: KeyPath<AppState, RootDescriptor>) {
         // Configure router with its initial route
-        guard let initialRoute = store.state[keyPath: keyPath].routes.first else {
+        let applicationRootState = store.getState()[keyPath: keyPath]
+        guard let initialRoute = applicationRootState.routes.first else {
             fatalError("Router cannot be empty of routes")
         }
         self.init(rootViewController: initialRoute.build())
         // Then sync store route stack, because route application state could be initialise with an array having more than one route
-        sync(store.state[keyPath: keyPath])
+        sync(applicationRootState)
         // Keep reference on store
         self.dispatchRouteAction = { store.dispatch($0) }
         // Subscribe for routes state changes
