@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0B9B05CA373CED2C9570F90DE6008139 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D65F82ED07D23D3E0599FF55B774CB /* Swidux.framework */; };
+		131F58D40D32ACB51BA22E2FAD95F8E4 /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB558F0970A1DD6D5635EA3C5BAEE46F /* SwiduxRouterTests.swift */; };
 		1CCCF8F1F086EC423EE170772EE59D54 /* SwiduxRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */; };
-		2CE65F7F015881B927F329DBBEA5E548 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */; };
-		413BB1743090E58895B31346F3D7AF54 /* RouteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */; };
+		248705A18DB6AD20EC6DC457184E68F4 /* RootDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED791F447FBA94C34FA44CC231C53AD /* RootDescriptor.swift */; };
+		2ECDFC8034A057BD9EEC6A2C37E5829E /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382D00451B04CC8AA900E6381B7CEED /* Route.swift */; };
+		32D236797AF7DB0DD9C244555CFC9E5D /* ParametricRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46420150E9E4799152DB7A585A92311 /* ParametricRoutable.swift */; };
 		434EE07463FF3D797B3E5AEAABA3F783 /* SwiduxRouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52EFEA4C5D8EDE3E2999027550B7C8F7 /* ParametricRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */; };
-		5DAEB93B834A28F631936E31380901D0 /* RootDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */; };
-		627CB0E04B11C5D069E0973254A76FCD /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */; };
-		6D0DF793080ACFC28F7CEB4914D70ED3 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */; };
-		AD43E5CC14C977A6073358386A696831 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */; };
-		B3BF1BDD74575F850E3C7E32BECAB990 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */; };
-		F83F84D220D21E14AA13761B412C3E68 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */; };
+		529BAFA5906FF62E84F65864D7CF7CA7 /* RouteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4071E79C8B054A445E59913E2AFBE1 /* RouteParams.swift */; };
+		79041F799DAC5A8D481F773388F1E0C9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39243ABDF4FA841CA1CA53AC0E7859 /* Router.swift */; };
+		84359BF632CC82FED9433065BE48B129 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FA89ADC484CD0DF26C97EA4DD20FF3 /* RouteReducer.swift */; };
+		B8208AA9431C456D1C6EB4F4E874AABE /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7057496E2773687F40CE364F1574F6B2 /* Routable.swift */; };
+		ECFC475AE67E9EE29144CEFA80096478 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AFE2B0F61CFE1A08BFA9EF291F309B /* RouteAction.swift */; };
 		F89B802F121E5870E16CFF149EF8E26C /* Swidux.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8D65F82ED07D23D3E0599FF55B774CB /* Swidux.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,18 +49,18 @@
 
 /* Begin PBXFileReference section */
 		08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiduxRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteParams.swift; sourceTree = "<group>"; };
-		1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
-		32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricRoutable.swift; sourceTree = "<group>"; };
-		631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		31FA89ADC484CD0DF26C97EA4DD20FF3 /* RouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteReducer.swift; sourceTree = "<group>"; };
+		3382D00451B04CC8AA900E6381B7CEED /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		3F39243ABDF4FA841CA1CA53AC0E7859 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7057496E2773687F40CE364F1574F6B2 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		8A14E58CDC78E7F2CD55CB9EEFD21431 /* SwiduxRouterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SwiduxRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteReducer.swift; sourceTree = "<group>"; };
-		C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDescriptor.swift; sourceTree = "<group>"; };
+		AD4071E79C8B054A445E59913E2AFBE1 /* RouteParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteParams.swift; sourceTree = "<group>"; };
+		CB558F0970A1DD6D5635EA3C5BAEE46F /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiduxRouterTests.swift; sourceTree = "<group>"; };
 		CE71F6D59C2EC4A841BA2861EFA89FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAction.swift; sourceTree = "<group>"; };
+		D0AFE2B0F61CFE1A08BFA9EF291F309B /* RouteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAction.swift; sourceTree = "<group>"; };
 		D6F526252B1AB28BCF1A999E09624F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiduxRouterTests.swift; sourceTree = "<group>"; };
+		E46420150E9E4799152DB7A585A92311 /* ParametricRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricRoutable.swift; sourceTree = "<group>"; };
+		EED791F447FBA94C34FA44CC231C53AD /* RootDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDescriptor.swift; sourceTree = "<group>"; };
 		F8D65F82ED07D23D3E0599FF55B774CB /* Swidux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swidux.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,16 +88,32 @@
 			isa = PBXGroup;
 			children = (
 				D6F526252B1AB28BCF1A999E09624F01 /* Info.plist */,
-				32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */,
-				C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */,
-				1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */,
-				78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */,
-				D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */,
-				11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */,
-				631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */,
-				B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */,
+				5CED3A7E9D70A7F3785489D0DCA491AD /* SwiduxRouter */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		5CED3A7E9D70A7F3785489D0DCA491AD /* SwiduxRouter */ = {
+			isa = PBXGroup;
+			children = (
+				E46420150E9E4799152DB7A585A92311 /* ParametricRoutable.swift */,
+				EED791F447FBA94C34FA44CC231C53AD /* RootDescriptor.swift */,
+				7057496E2773687F40CE364F1574F6B2 /* Routable.swift */,
+				3382D00451B04CC8AA900E6381B7CEED /* Route.swift */,
+				D0AFE2B0F61CFE1A08BFA9EF291F309B /* RouteAction.swift */,
+				AD4071E79C8B054A445E59913E2AFBE1 /* RouteParams.swift */,
+				3F39243ABDF4FA841CA1CA53AC0E7859 /* Router.swift */,
+				31FA89ADC484CD0DF26C97EA4DD20FF3 /* RouteReducer.swift */,
+			);
+			path = SwiduxRouter;
+			sourceTree = "<group>";
+		};
+		670514D9A41243991D22EAC6198B04AA /* SwiduxRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB558F0970A1DD6D5635EA3C5BAEE46F /* SwiduxRouterTests.swift */,
+			);
+			path = SwiduxRouterTests;
 			sourceTree = "<group>";
 		};
 		721850FF92062D9CCBFD1309673D524D /* Carthage */ = {
@@ -126,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				CE71F6D59C2EC4A841BA2861EFA89FD9 /* Info.plist */,
-				EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */,
+				670514D9A41243991D22EAC6198B04AA /* SwiduxRouterTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -223,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627CB0E04B11C5D069E0973254A76FCD /* SwiduxRouterTests.swift in Sources */,
+				131F58D40D32ACB51BA22E2FAD95F8E4 /* SwiduxRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,14 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EFEA4C5D8EDE3E2999027550B7C8F7 /* ParametricRoutable.swift in Sources */,
-				5DAEB93B834A28F631936E31380901D0 /* RootDescriptor.swift in Sources */,
-				AD43E5CC14C977A6073358386A696831 /* Routable.swift in Sources */,
-				6D0DF793080ACFC28F7CEB4914D70ED3 /* Route.swift in Sources */,
-				F83F84D220D21E14AA13761B412C3E68 /* RouteAction.swift in Sources */,
-				413BB1743090E58895B31346F3D7AF54 /* RouteParams.swift in Sources */,
-				B3BF1BDD74575F850E3C7E32BECAB990 /* RouteReducer.swift in Sources */,
-				2CE65F7F015881B927F329DBBEA5E548 /* Router.swift in Sources */,
+				32D236797AF7DB0DD9C244555CFC9E5D /* ParametricRoutable.swift in Sources */,
+				248705A18DB6AD20EC6DC457184E68F4 /* RootDescriptor.swift in Sources */,
+				B8208AA9431C456D1C6EB4F4E874AABE /* Routable.swift in Sources */,
+				2ECDFC8034A057BD9EEC6A2C37E5829E /* Route.swift in Sources */,
+				ECFC475AE67E9EE29144CEFA80096478 /* RouteAction.swift in Sources */,
+				529BAFA5906FF62E84F65864D7CF7CA7 /* RouteParams.swift in Sources */,
+				84359BF632CC82FED9433065BE48B129 /* RouteReducer.swift in Sources */,
+				79041F799DAC5A8D481F773388F1E0C9 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
