@@ -7,172 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC3FE54121F79A2C009CA663 /* SwiduxRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF6A89D21F79795008484B7 /* SwiduxRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC86FEAD22043D8E004BE939 /* Swidux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC86FEA822043D6C004BE939 /* Swidux.framework */; };
-		FCF6A87B21F7966D008484B7 /* SwiduxRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */; };
-		FCF6A88021F7966D008484B7 /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A87F21F7966D008484B7 /* SwiduxRouterTests.swift */; };
-		FCF6A89421F7970B008484B7 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88B21F79709008484B7 /* RouteAction.swift */; };
-		FCF6A89521F7970B008484B7 /* ParametricRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88C21F79709008484B7 /* ParametricRoutable.swift */; };
-		FCF6A89621F7970B008484B7 /* RootDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88D21F7970A008484B7 /* RootDescriptor.swift */; };
-		FCF6A89721F7970B008484B7 /* RouteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88E21F7970A008484B7 /* RouteParams.swift */; };
-		FCF6A89821F7970B008484B7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A88F21F7970A008484B7 /* Router.swift */; };
-		FCF6A89921F7970B008484B7 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89021F7970A008484B7 /* RouteReducer.swift */; };
-		FCF6A89A21F7970B008484B7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89121F7970A008484B7 /* Routable.swift */; };
-		FCF6A89C21F7970B008484B7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6A89321F7970B008484B7 /* Route.swift */; };
+		1CCCF8F1F086EC423EE170772EE59D54 /* SwiduxRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */; };
+		2CE65F7F015881B927F329DBBEA5E548 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */; };
+		413BB1743090E58895B31346F3D7AF54 /* RouteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */; };
+		434EE07463FF3D797B3E5AEAABA3F783 /* SwiduxRouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52EFEA4C5D8EDE3E2999027550B7C8F7 /* ParametricRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */; };
+		5DAEB93B834A28F631936E31380901D0 /* RootDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */; };
+		627CB0E04B11C5D069E0973254A76FCD /* SwiduxRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */; };
+		6D0DF793080ACFC28F7CEB4914D70ED3 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */; };
+		AD43E5CC14C977A6073358386A696831 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */; };
+		B3BF1BDD74575F850E3C7E32BECAB990 /* RouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */; };
+		F83F84D220D21E14AA13761B412C3E68 /* RouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC86FEA122043D6C004BE939 /* PBXContainerItemProxy */ = {
+		ABBF8E37C315C55FA9A4B1E795E30E66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B84A881550CC9E33034E6C3B28D2E405;
-			remoteInfo = SwiduxTests_iOS;
-		};
-		FC86FEA322043D6C004BE939 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C020E0ACF2A50D88680B8D5FC2677CA9;
-			remoteInfo = SwiduxTests_macOS;
-		};
-		FC86FEA522043D6C004BE939 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6B43303D9BE1DE4F0CAB6510A965A14B;
-			remoteInfo = SwiduxTests_tvOS;
-		};
-		FC86FEA722043D6C004BE939 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E00E58B90F61327BE10853247E09B69B;
-			remoteInfo = Swidux_iOS;
-		};
-		FC86FEA922043D6C004BE939 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EEB320226CDAC1A50D285E463B28A73F;
-			remoteInfo = Swidux_macOS;
-		};
-		FC86FEAB22043D6C004BE939 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ED7F98FFB69D653A28196DA164FE66F6;
-			remoteInfo = Swidux_tvOS;
-		};
-		FCF6A87C21F7966D008484B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCF6A86821F7966D008484B7 /* Project object */;
+			containerPortal = 2BC792E0F5C8D0D32B5F9FA8D08F6E4B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCF6A87021F7966D008484B7;
-			remoteInfo = SwiduxRouter;
+			remoteGlobalIDString = 6E3B7B6D423925CC0B1ABBD124BA787C;
+			remoteInfo = SwiduxRouter_iOS;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6ADD5458AD36D2EBE5114E9E3E47B517 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				434EE07463FF3D797B3E5AEAABA3F783 /* SwiduxRouter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiduxRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCF6A87521F7966D008484B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCF6A87A21F7966D008484B7 /* SwiduxRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiduxRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCF6A87F21F7966D008484B7 /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiduxRouterTests.swift; path = ../Tests/SwiduxRouterTests.swift; sourceTree = "<group>"; };
-		FCF6A88121F7966D008484B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/Info.plist; sourceTree = "<group>"; };
-		FCF6A88B21F79709008484B7 /* RouteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAction.swift; sourceTree = "<group>"; };
-		FCF6A88C21F79709008484B7 /* ParametricRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametricRoutable.swift; sourceTree = "<group>"; };
-		FCF6A88D21F7970A008484B7 /* RootDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootDescriptor.swift; sourceTree = "<group>"; };
-		FCF6A88E21F7970A008484B7 /* RouteParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteParams.swift; sourceTree = "<group>"; };
-		FCF6A88F21F7970A008484B7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		FCF6A89021F7970A008484B7 /* RouteReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteReducer.swift; sourceTree = "<group>"; };
-		FCF6A89121F7970A008484B7 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
-		FCF6A89321F7970B008484B7 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		FCF6A89D21F79795008484B7 /* SwiduxRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiduxRouter.h; sourceTree = "<group>"; };
-		FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swidux.xcodeproj; path = Frameworks/swidux/Swidux.xcodeproj; sourceTree = "<group>"; };
+		08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiduxRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteParams.swift; sourceTree = "<group>"; };
+		1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricRoutable.swift; sourceTree = "<group>"; };
+		631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		8A14E58CDC78E7F2CD55CB9EEFD21431 /* SwiduxRouterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SwiduxRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteReducer.swift; sourceTree = "<group>"; };
+		C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDescriptor.swift; sourceTree = "<group>"; };
+		CE71F6D59C2EC4A841BA2861EFA89FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAction.swift; sourceTree = "<group>"; };
+		D6F526252B1AB28BCF1A999E09624F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiduxRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FCF6A86E21F7966D008484B7 /* Frameworks */ = {
+		763114CBD09695908E696CC6C5A11517 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC86FEAD22043D8E004BE939 /* Swidux.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCF6A87721F7966D008484B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCF6A87B21F7966D008484B7 /* SwiduxRouter.framework in Frameworks */,
+				1CCCF8F1F086EC423EE170772EE59D54 /* SwiduxRouter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FCF6A86721F7966D008484B7 = {
+		3BD85DA87B97D778B3EDAF92D9FA6897 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FCF6A8A021F79871008484B7 /* Frameworks */,
-				FCF6A87321F7966D008484B7 /* Sources */,
-				FCF6A87E21F7966D008484B7 /* Tests */,
-				FCF6A87221F7966D008484B7 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		FCF6A87221F7966D008484B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */,
-				FCF6A87A21F7966D008484B7 /* SwiduxRouterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FCF6A87321F7966D008484B7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				FCF6A87521F7966D008484B7 /* Info.plist */,
-				FCF6A89D21F79795008484B7 /* SwiduxRouter.h */,
-				FCF6A88C21F79709008484B7 /* ParametricRoutable.swift */,
-				FCF6A88D21F7970A008484B7 /* RootDescriptor.swift */,
-				FCF6A89121F7970A008484B7 /* Routable.swift */,
-				FCF6A89321F7970B008484B7 /* Route.swift */,
-				FCF6A88B21F79709008484B7 /* RouteAction.swift */,
-				FCF6A88E21F7970A008484B7 /* RouteParams.swift */,
-				FCF6A88F21F7970A008484B7 /* Router.swift */,
-				FCF6A89021F7970A008484B7 /* RouteReducer.swift */,
+				D6F526252B1AB28BCF1A999E09624F01 /* Info.plist */,
+				32FDD9C432AFE51BBD3F2E790AE1C3E7 /* ParametricRoutable.swift */,
+				C049A8C8AA4B6133B7BE66ED97974982 /* RootDescriptor.swift */,
+				1539588C81AE5EA5F9E7A85E14C46817 /* Routable.swift */,
+				78946C2F8EE0B15F048627DD0BC6B08C /* Route.swift */,
+				D2C35208A78BEEB255A3B09FCD325945 /* RouteAction.swift */,
+				11765051EF3D85D45277B79BBC967EDA /* RouteParams.swift */,
+				631C1E1339B66AC4E1B57E033090EAE7 /* Router.swift */,
+				B134D5EB11F38903637CD79DCD3EFB32 /* RouteReducer.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		FCF6A87E21F7966D008484B7 /* Tests */ = {
+		99920E0AEF975B0181A845C77B6F33CB = {
 			isa = PBXGroup;
 			children = (
-				FCF6A87F21F7966D008484B7 /* SwiduxRouterTests.swift */,
-				FCF6A88121F7966D008484B7 /* Info.plist */,
+				3BD85DA87B97D778B3EDAF92D9FA6897 /* Sources */,
+				A93B7A30E20B315D8BBA04A18DA0311E /* Tests */,
+				F7510263097824D9C0BBC263A991765A /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+		};
+		A93B7A30E20B315D8BBA04A18DA0311E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CE71F6D59C2EC4A841BA2861EFA89FD9 /* Info.plist */,
+				EEEDB892D478FA9A9929E12CDD6C7971 /* SwiduxRouterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		FCF6A8A021F79871008484B7 /* Frameworks */ = {
+		F7510263097824D9C0BBC263A991765A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FCF6A8A221F79888008484B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FC86FEA222043D6C004BE939 /* SwiduxTests.xctest */,
-				FC86FEA422043D6C004BE939 /* SwiduxTests.xctest */,
-				FC86FEA622043D6C004BE939 /* SwiduxTests.xctest */,
-				FC86FEA822043D6C004BE939 /* Swidux.framework */,
-				FC86FEAA22043D6C004BE939 /* Swidux.framework */,
-				FC86FEAC22043D6C004BE939 /* Swidux.framework */,
+				08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */,
+				8A14E58CDC78E7F2CD55CB9EEFD21431 /* SwiduxRouterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,258 +121,128 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FCF6A86C21F7966D008484B7 /* Headers */ = {
+		229998A66B01E3254100F395E995E690 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3FE54121F79A2C009CA663 /* SwiduxRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FCF6A87021F7966D008484B7 /* SwiduxRouter */ = {
+		6E3B7B6D423925CC0B1ABBD124BA787C /* SwiduxRouter_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCF6A88521F7966D008484B7 /* Build configuration list for PBXNativeTarget "SwiduxRouter" */;
+			buildConfigurationList = 9C54C7AEEE1F46ED063648AB2135D7A7 /* Build configuration list for PBXNativeTarget "SwiduxRouter_iOS" */;
 			buildPhases = (
-				FCF6A86C21F7966D008484B7 /* Headers */,
-				FCF6A86D21F7966D008484B7 /* Sources */,
-				FCF6A86E21F7966D008484B7 /* Frameworks */,
-				FCF6A86F21F7966D008484B7 /* Resources */,
+				229998A66B01E3254100F395E995E690 /* Headers */,
+				A1B99312BDEB46397EBC2E6D9A883F67 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiduxRouter;
-			productName = SwiduxRouter;
-			productReference = FCF6A87121F7966D008484B7 /* SwiduxRouter.framework */;
+			name = SwiduxRouter_iOS;
+			productName = SwiduxRouter_iOS;
+			productReference = 08AC9BD6B106CA9743BFA0479649D003 /* SwiduxRouter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FCF6A87921F7966D008484B7 /* SwiduxRouterTests */ = {
+		86816B74713D9D1382C3E174966367FB /* SwiduxRouterTests_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCF6A88821F7966D008484B7 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests" */;
+			buildConfigurationList = 7781B14BEA557720FB11C840FABBDC21 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests_iOS" */;
 			buildPhases = (
-				FCF6A87621F7966D008484B7 /* Sources */,
-				FCF6A87721F7966D008484B7 /* Frameworks */,
-				FCF6A87821F7966D008484B7 /* Resources */,
+				1880C278A0ABD9CFD7AD7D8C8278B6B6 /* Sources */,
+				763114CBD09695908E696CC6C5A11517 /* Frameworks */,
+				6ADD5458AD36D2EBE5114E9E3E47B517 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FCF6A87D21F7966D008484B7 /* PBXTargetDependency */,
+				919069F9E6CCA602E55DACA86782A357 /* PBXTargetDependency */,
 			);
-			name = SwiduxRouterTests;
-			productName = SwiduxRouterTests;
-			productReference = FCF6A87A21F7966D008484B7 /* SwiduxRouterTests.xctest */;
+			name = SwiduxRouterTests_iOS;
+			productName = SwiduxRouterTests_iOS;
+			productReference = 8A14E58CDC78E7F2CD55CB9EEFD21431 /* SwiduxRouterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FCF6A86821F7966D008484B7 /* Project object */ = {
+		2BC792E0F5C8D0D32B5F9FA8D08F6E4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = clmntcrl;
-				TargetAttributes = {
-					FCF6A87021F7966D008484B7 = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-					};
-					FCF6A87921F7966D008484B7 = {
-						CreatedOnToolsVersion = 10.1;
-					};
-				};
+				LastUpgradeCheck = 1000;
 			};
-			buildConfigurationList = FCF6A86B21F7966D008484B7 /* Build configuration list for PBXProject "SwiduxRouter" */;
+			buildConfigurationList = 13CD57938946DBEB31523C8F96C06D15 /* Build configuration list for PBXProject "SwiduxRouter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FCF6A86721F7966D008484B7;
-			productRefGroup = FCF6A87221F7966D008484B7 /* Products */;
+			mainGroup = 99920E0AEF975B0181A845C77B6F33CB;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FCF6A8A221F79888008484B7 /* Products */;
-					ProjectRef = FCF6A8A121F79888008484B7 /* Swidux.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				FCF6A87021F7966D008484B7 /* SwiduxRouter */,
-				FCF6A87921F7966D008484B7 /* SwiduxRouterTests */,
+				86816B74713D9D1382C3E174966367FB /* SwiduxRouterTests_iOS */,
+				6E3B7B6D423925CC0B1ABBD124BA787C /* SwiduxRouter_iOS */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		FC86FEA222043D6C004BE939 /* SwiduxTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiduxTests.xctest;
-			remoteRef = FC86FEA122043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC86FEA422043D6C004BE939 /* SwiduxTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiduxTests.xctest;
-			remoteRef = FC86FEA322043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC86FEA622043D6C004BE939 /* SwiduxTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiduxTests.xctest;
-			remoteRef = FC86FEA522043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC86FEA822043D6C004BE939 /* Swidux.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Swidux.framework;
-			remoteRef = FC86FEA722043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC86FEAA22043D6C004BE939 /* Swidux.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Swidux.framework;
-			remoteRef = FC86FEA922043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC86FEAC22043D6C004BE939 /* Swidux.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Swidux.framework;
-			remoteRef = FC86FEAB22043D6C004BE939 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXResourcesBuildPhase section */
-		FCF6A86F21F7966D008484B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCF6A87821F7966D008484B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		FCF6A86D21F7966D008484B7 /* Sources */ = {
+		1880C278A0ABD9CFD7AD7D8C8278B6B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF6A89921F7970B008484B7 /* RouteReducer.swift in Sources */,
-				FCF6A89A21F7970B008484B7 /* Routable.swift in Sources */,
-				FCF6A89621F7970B008484B7 /* RootDescriptor.swift in Sources */,
-				FCF6A89421F7970B008484B7 /* RouteAction.swift in Sources */,
-				FCF6A89821F7970B008484B7 /* Router.swift in Sources */,
-				FCF6A89C21F7970B008484B7 /* Route.swift in Sources */,
-				FCF6A89521F7970B008484B7 /* ParametricRoutable.swift in Sources */,
-				FCF6A89721F7970B008484B7 /* RouteParams.swift in Sources */,
+				627CB0E04B11C5D069E0973254A76FCD /* SwiduxRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCF6A87621F7966D008484B7 /* Sources */ = {
+		A1B99312BDEB46397EBC2E6D9A883F67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF6A88021F7966D008484B7 /* SwiduxRouterTests.swift in Sources */,
+				52EFEA4C5D8EDE3E2999027550B7C8F7 /* ParametricRoutable.swift in Sources */,
+				5DAEB93B834A28F631936E31380901D0 /* RootDescriptor.swift in Sources */,
+				AD43E5CC14C977A6073358386A696831 /* Routable.swift in Sources */,
+				6D0DF793080ACFC28F7CEB4914D70ED3 /* Route.swift in Sources */,
+				F83F84D220D21E14AA13761B412C3E68 /* RouteAction.swift in Sources */,
+				413BB1743090E58895B31346F3D7AF54 /* RouteParams.swift in Sources */,
+				B3BF1BDD74575F850E3C7E32BECAB990 /* RouteReducer.swift in Sources */,
+				2CE65F7F015881B927F329DBBEA5E548 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FCF6A87D21F7966D008484B7 /* PBXTargetDependency */ = {
+		919069F9E6CCA602E55DACA86782A357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCF6A87021F7966D008484B7 /* SwiduxRouter */;
-			targetProxy = FCF6A87C21F7966D008484B7 /* PBXContainerItemProxy */;
+			target = 6E3B7B6D423925CC0B1ABBD124BA787C /* SwiduxRouter_iOS */;
+			targetProxy = ABBF8E37C315C55FA9A4B1E795E30E66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		FCF6A88321F7966D008484B7 /* Debug */ = {
+		48C9FD9A80FC8618BCD7713A320CC513 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.clmntcrl.SwiduxRouterTests-iOS";
+				PRODUCT_NAME = SwiduxRouterTests;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
-		FCF6A88421F7966D008484B7 /* Release */ = {
+		6C55EC112CBE379AE52C196365A45FF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -441,7 +252,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -463,9 +273,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -477,140 +285,179 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		FCF6A88621F7966D008484B7 /* Debug */ = {
+		B01BBA4AAED34194179AE000A4569629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.clmntcrl.SwiduxRouter-iOS";
+				PRODUCT_NAME = SwiduxRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		B62FC449064CC1FA436968CC026A9AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.clmntcrl.SwiduxRouter;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.clmntcrl.SwiduxRouterTests-iOS";
+				PRODUCT_NAME = SwiduxRouterTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0B1E763835649610B36D5A08D1D1CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.clmntcrl.SwiduxRouter-iOS";
+				PRODUCT_NAME = SwiduxRouter;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		F8A8689870A5A7F67016E0C308DC362A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		FCF6A88721F7966D008484B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.clmntcrl.SwiduxRouter;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FCF6A88921F7966D008484B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W624386YMM;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.clmntcrl.SwiduxRouterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FCF6A88A21F7966D008484B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W624386YMM;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.clmntcrl.SwiduxRouterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCF6A86B21F7966D008484B7 /* Build configuration list for PBXProject "SwiduxRouter" */ = {
+		13CD57938946DBEB31523C8F96C06D15 /* Build configuration list for PBXProject "SwiduxRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF6A88321F7966D008484B7 /* Debug */,
-				FCF6A88421F7966D008484B7 /* Release */,
+				F8A8689870A5A7F67016E0C308DC362A /* Debug */,
+				6C55EC112CBE379AE52C196365A45FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		FCF6A88521F7966D008484B7 /* Build configuration list for PBXNativeTarget "SwiduxRouter" */ = {
+		7781B14BEA557720FB11C840FABBDC21 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF6A88621F7966D008484B7 /* Debug */,
-				FCF6A88721F7966D008484B7 /* Release */,
+				B62FC449064CC1FA436968CC026A9AE5 /* Debug */,
+				48C9FD9A80FC8618BCD7713A320CC513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		FCF6A88821F7966D008484B7 /* Build configuration list for PBXNativeTarget "SwiduxRouterTests" */ = {
+		9C54C7AEEE1F46ED063648AB2135D7A7 /* Build configuration list for PBXNativeTarget "SwiduxRouter_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF6A88921F7966D008484B7 /* Debug */,
-				FCF6A88A21F7966D008484B7 /* Release */,
+				D0B1E763835649610B36D5A08D1D1CB2 /* Debug */,
+				B01BBA4AAED34194179AE000A4569629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FCF6A86821F7966D008484B7 /* Project object */;
+	rootObject = 2BC792E0F5C8D0D32B5F9FA8D08F6E4B /* Project object */;
 }

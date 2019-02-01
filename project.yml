@@ -1,0 +1,22 @@
+name: SwiduxRouter
+options:
+    bundleIdPrefix: io.clmntcrl
+    deploymentTarget:
+        iOS: 10.0
+    indentWidth: 4
+    tabWidth: 4
+    usesTabs: false
+targets:
+    SwiduxRouter:
+        platform: [iOS]
+        settings:
+            FRAMEWORK_SEARCH_PATHS: $(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks
+        scheme:
+            testTargets: [SwiduxRouterTests_$platform]
+        sources: [Sources]
+        type: framework
+    SwiduxRouterTests:
+        dependencies: [{target: SwiduxRouter_$platform}]
+        platform: [iOS]
+        sources: [Tests]
+        type: bundle.unit-test
